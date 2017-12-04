@@ -1,0 +1,23 @@
+	nav{
+		margin:0px;
+	
+		border: 1px solid #1e5b18;
+		width:100%;
+		position:fixed;
+		top:0;
+		border:1px solid #1e5b18;
+		background-color:#1e5b18;
+		padding: 2px;
+	}
+
+	a{color:#ffffff;}
+	
+	body{
+		font-family:"Times New Roman", Times, serif;
+	margin: 55px;
+	background-color:#6c915d;
+	color:##ffffff;
+			text-align: center;
+	
+	}
+	
