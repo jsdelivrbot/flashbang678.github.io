@@ -15,7 +15,7 @@ var playerImage;
 var obstacleSprites;
 
 function preload(){
-playerImage=loadImage("./spaceship")
+playerImage=loadImage("./spaceship.png")
 }
 
 
