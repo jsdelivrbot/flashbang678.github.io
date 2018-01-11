@@ -15,7 +15,7 @@ var playerImage;
 var obstacleSprites;
 
 function preload(){
-playerImage=loadImage("https://www.khanacademy.org/computer-programming/pixel-art-spaceship-for/3855978448/5629499534213120.png")
+playerImage=loadImage("https://i.imgur.com/a/snCzK")
 }
 
 
