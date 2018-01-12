@@ -2,8 +2,9 @@ var isGameOver;
 var score;
 
 var GRAVITY = 0.3;
-var JUMP = -5;
-var BOOST = 10
+var JUMP = -8;
+var DIVE = -8
+var BOOST = 15,
 
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
@@ -36,7 +37,7 @@ function setup() {
         groundSprites.add(groundSprite);
     }
     
-    player = createSprite(100, height-75, 50, 50);
+    player = createSprite(100, height 75, 50, 50);
     
     obstacleSprites = new Group();
     player.addImage(playerImage);
@@ -53,15 +54,11 @@ function draw() {
     } else {
         background(250, 300, 350);
         
-        player.velocity.y = player.velocity.y + GRAVITY;
-        
-        if (groundSprites.overlap(player)) {
-            player.velocity.y = 0;
-            player.position.y = (height-50) - (player.height/2);
-        }
-        
         if (keyDown(UP_ARROW)) {
             player.velocity.y = JUMP;
+        }
+        if (keyDown(DOWN_ARROW)) {
+            player.velocity.y = DIVE;
         }
         
         var firstGroundSprite = groundSprites[0];
@@ -82,6 +79,7 @@ function draw() {
         }
         
         obstacleSprites.overlap(player, endGame);
+        obstacleSprites.overlap(player, endGame);
         
         drawSprites();
         
@@ -90,7 +88,7 @@ function draw() {
         text(score, camera.position.x, 10);
         
         if (keyDown(RIGHT_ARROW)){
-            player.position.x = player.position.x + 10 + BOOST ;
+            player.position.x = player.position.x + 15 + BOOST ;
             camera.position.x = player.position.x + (width/16) + BOOST;
         }else {player.position.x = player.position.x + 10 ;
             camera.position.x = player.position.x + (width/16)}
