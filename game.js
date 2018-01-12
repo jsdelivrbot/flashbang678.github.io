@@ -2,7 +2,7 @@ var isGameOver;
 var score;
 
 var GRAVITY = 0.3;
-var JUMP = -10;
+var JUMP = -5;
 var BOOST = 10
 
 var groundSprites;
