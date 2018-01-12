@@ -40,8 +40,7 @@ function setup() {
     
     obstacleSprites = new Group();
     player.addImage(playerImage);
-    player.height=50;
-    player.width=50;
+    player.scale=.25;
 }
 
 function draw() {
@@ -93,7 +92,7 @@ function draw() {
         textAlign(CENTER);
         text(score, camera.position.x, 10);
         
-//         if (keyDown(LEFT_ARROW)
+        // if (keyDown(LEFT_ARROW);
     } 
 }
 
