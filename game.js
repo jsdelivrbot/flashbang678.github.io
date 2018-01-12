@@ -3,7 +3,7 @@ var score;
 
 var GRAVITY = 0.3;
 var JUMP = -10;
-var DASH =10
+var BOOST = 10
 
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
@@ -64,9 +64,6 @@ function draw() {
             player.velocity.y = JUMP;
         }
         
-        player.position.x = player.position.x + 20;
-        camera.position.x = player.position.x + (width/16);
-        
         var firstGroundSprite = groundSprites[0];
         if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)) {
             groundSprites.remove(firstGroundSprite);
@@ -92,7 +89,11 @@ function draw() {
         textAlign(CENTER);
         text(score, camera.position.x, 10);
         
-        // if (keyDown(LEFT_ARROW);
+        if (keyDown(LEFT_ARROW)){
+            player.position.x = player.position.x + 10 + BOOST ;
+            camera.position.x = player.position.x + (width/16) + BOOST;
+        }else {player.position.x = player.position.x + 10 ;
+            camera.position.x = player.position.x + (width/16)}
     } 
 }
 
