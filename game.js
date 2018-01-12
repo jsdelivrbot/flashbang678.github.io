@@ -93,7 +93,7 @@ function draw() {
         textAlign(CENTER);
         text(score, camera.position.x, 10);
         
-        if (keyDown(LEFT_ARROW)
+//         if (keyDown(LEFT_ARROW)
     } 
 }
 
