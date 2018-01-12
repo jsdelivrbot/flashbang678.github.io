@@ -3,6 +3,7 @@ var score;
 
 var GRAVITY = 0.3;
 var JUMP = -10;
+var DASH =10
 
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
@@ -38,7 +39,9 @@ function setup() {
     player = createSprite(100, height-75, 50, 50);
     
     obstacleSprites = new Group();
-    player.addImage(playerImage)
+    player.addImage(playerImage);
+    player.height=50;
+    player.width=50;
 }
 
 function draw() {
@@ -89,7 +92,9 @@ function draw() {
         score = score + 1;
         textAlign(CENTER);
         text(score, camera.position.x, 10);
-    }
+        
+        if (keyDown(LEFT_ARROW)
+    } 
 }
 
 function endGame() {
