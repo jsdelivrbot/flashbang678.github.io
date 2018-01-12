@@ -6,7 +6,7 @@ var JUMP = -8;
 var DIVE = -8
 var BOOST = 15,
 
-var groundSprites;
+var GroundSprites;
 var GROUND_SPRITE_WIDTH = 50;
 var GROUND_SPRITE_HEIGHT = 50;
 var numGroundSprites;
