@@ -89,7 +89,7 @@ function draw() {
         textAlign(CENTER);
         text(score, camera.position.x, 10);
         
-        if (keyDown(LEFT_ARROW)){
+        if (keyDown(RIGHT_ARROW)){
             player.position.x = player.position.x + 10 + BOOST ;
             camera.position.x = player.position.x + (width/16) + BOOST;
         }else {player.position.x = player.position.x + 10 ;
