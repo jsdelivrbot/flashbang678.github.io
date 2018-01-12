@@ -78,7 +78,7 @@ function draw() {
             removeSprite(firstObstacle);
         }
         
-        obstacleSprites.overlap(player, endGame);
+        groundSprites.overlap(player, endGame);
         obstacleSprites.overlap(player, endGame);
         
         drawSprites();
