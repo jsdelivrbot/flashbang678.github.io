@@ -3,8 +3,8 @@ var score;
 
 var GRAVITY = 0.3;
 var JUMP = -8;
-var DIVE = -8
-var BOOST = 15,
+var DIVE = -8;
+var BOOST = 15;
 
 var GroundSprites;
 var GROUND_SPRITE_WIDTH = 50;
