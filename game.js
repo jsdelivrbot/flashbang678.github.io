@@ -114,4 +114,3 @@ function mouseClicked() {
     isGameOver = false;
   }
 }
-//updated
