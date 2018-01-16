@@ -54,6 +54,8 @@ function draw() {
     } else {
         background(250, 300, 350);
         
+        player.velocity.y = player.velocity.y + GRAVITY;
+        
         if (keyDown(UP_ARROW)) {
             player.velocity.y = JUMP;
         }
