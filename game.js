@@ -6,7 +6,7 @@ var JUMP = -8;
 var DIVE = -8;
 var BOOST = 15;
 
-var GroundSprites;
+var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
 var GROUND_SPRITE_HEIGHT = 50;
 var numGroundSprites;
@@ -60,8 +60,13 @@ function draw() {
         if (keyDown(DOWN_ARROW)) {
             player.velocity.y = DIVE;
         }
+        if (keyDown(RIGHT_ARROW)){
+            player.position.x = player.position.x + 15 + BOOST ;
+            camera.position.x = player.position.x + (width/16) + BOOST;
+        }else {player.position.x = player.position.x + 10 ;
+            camera.position.x = player.position.x + (width/16)}
         
-        var firstGroundSprite = groundSprites[0];
+var firstGroundSprite = groundSprites[0];
         if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)) {
             groundSprites.remove(firstGroundSprite);
             firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
@@ -78,7 +83,6 @@ function draw() {
             removeSprite(firstObstacle);
         }
         
-        groundSprites.overlap(player, endGame);
         obstacleSprites.overlap(player, endGame);
         
         drawSprites();
@@ -86,13 +90,7 @@ function draw() {
         score = score + 1;
         textAlign(CENTER);
         text(score, camera.position.x, 10);
-        
-        if (keyDown(RIGHT_ARROW)){
-            player.position.x = player.position.x + 15 + BOOST ;
-            camera.position.x = player.position.x + (width/16) + BOOST;
-        }else {player.position.x = player.position.x + 10 ;
-            camera.position.x = player.position.x + (width/16)}
-    } 
+    }
 }
 
 function endGame() {
