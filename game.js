@@ -4,7 +4,7 @@ var score;
 var GRAVITY = 0.3;
 var JUMP = -7;
 var DIVE = 7;
-var BOOST = 15;
+var BOOST = 10;
 
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
@@ -67,7 +67,7 @@ function draw() {
             player.velocity.y = DIVE;
         }
         if (keyDown(RIGHT_ARROW)){
-            player.position.x = player.position.x + 15 + BOOST ;
+            player.position.x = player.position.x + 10 + BOOST ;
             camera.position.x = player.position.x + (width/16) + BOOST;
         }else {player.position.x = player.position.x + 10 ;
             camera.position.x = player.position.x + (width/16)}
