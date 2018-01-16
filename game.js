@@ -55,6 +55,10 @@ function draw() {
         background(250, 300, 350);
         
         player.velocity.y = player.velocity.y + GRAVITY;
+        if (groundSprites.overlap(player)) {
+            player.velocity.y = 0;
+            player.position.y = (height-50) - (player.height/2);
+        }
         
         if (keyDown(UP_ARROW)) {
             player.velocity.y = JUMP;
