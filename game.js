@@ -67,7 +67,7 @@ function draw() {
             player.velocity.y = DIVE;
         }
         if (keyDown(RIGHT_ARROW)){
-            player.position.x = player.position.x + 10 + BOOST ;
+            player.position.x = player.position.x + 13 + BOOST ;
             camera.position.x = player.position.x + (width/16) + BOOST;
         }else {player.position.x = player.position.x + 10 ;
             camera.position.x = player.position.x + (width/16)}
@@ -76,6 +76,7 @@ var firstGroundSprite = groundSprites[0];
         if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)) {
             groundSprites.remove(firstGroundSprite);
             firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
+            groundSprite.shapeColor = color(79, 37, 14);
             groundSprites.add(firstGroundSprite);
         }
         
@@ -85,6 +86,7 @@ var firstGroundSprite = groundSprites[0];
         }
         
         var firstObstacle = obstacleSprites[0];
+            obstacleSprites.shapeColor = color(119, 113, 110);
         if (obstacleSprites.length > 0 && firstObstacle.position.x <= camera.position.x - (width/2 + firstObstacle.width/2)) {
             removeSprite(firstObstacle);
         }
@@ -93,7 +95,7 @@ var firstGroundSprite = groundSprites[0];
         
         drawSprites();
         
-        score = score + 1;
+        score = score + 1 +scor;
         textAlign(CENTER);
         text(score, camera.position.x, 10);
     }
