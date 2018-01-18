@@ -68,8 +68,10 @@ function draw() {
         }
         if (keyDown(RIGHT_ARROW)){
             player.position.x = player.position.x + 13 + BOOST ;
+            score = score + 2
             camera.position.x = player.position.x + (width/16) + BOOST;
         }else {player.position.x = player.position.x + 10 ;
+            score = score + 1
             camera.position.x = player.position.x + (width/16)}
         
 var firstGroundSprite = groundSprites[0];
@@ -95,7 +97,6 @@ var firstGroundSprite = groundSprites[0];
         
         drawSprites();
         
-        score = score + 1 +scor;
         textAlign(CENTER);
         text(score, camera.position.x, 10);
     }
