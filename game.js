@@ -21,7 +21,7 @@ var gemImage;
 
 function preload(){
 playerImage=loadImage("./spaceship.png")
-Image=loadImage("./Gem.png")
+gemImage=loadImage("./Gem.png")
 }
 
 
