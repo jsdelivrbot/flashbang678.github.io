@@ -79,14 +79,25 @@ function draw() {
             obstacleSprites.add(obstacle);
             obstacle.shapeColor = color(107, 102, 100);
         }
+        if (random() > 0.95) {
+            var gem = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
+            gemSprites.add(gem);
+            gem.addImage(Gem.png);
+                    }
         
         var firstObstacle = obstacleSprites[0];
             obstacleSprites.shapeColor = color(119, 113, 110);
         if (obstacleSprites.length > 0 && firstObstacle.position.x <= camera.position.x - (width/2 + firstObstacle.width/2)) {
             removeSprite(firstObstacle);
         }
+        var firstGem = gemSprites[0];
+            gemSprites.addImage =
+        if (obstacleSprites.length > 0 && firstObstacle.position.x <= camera.position.x - (width/2 + firstObstacle.width/2)) {
+            removeSprite(firstObstacle);
+        }
         
         obstacleSprites.overlap(player, endGame);
+        gemSprites.overlap(player, score +10);
 
         if (keyDown(UP_ARROW)) {
             player.velocity.y = JUMP;
