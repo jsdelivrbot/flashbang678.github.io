@@ -31,6 +31,11 @@ function setup() {
     groundSprites = new Group();
     
     numGroundSprites = width/GROUND_SPRITE_WIDTH+1;
+    for (var n = 0; n < numGroundSprites; n++) {
+        var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
+        groundSprite.shapeColor = color(76, 30, 6);
+        groundSprites.add(groundSprite);
+    }
 
     for (var n = 0; n < numGroundSprites; n++) {
         var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
@@ -78,13 +83,13 @@ var firstGroundSprite = groundSprites[0];
         if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)) {
             groundSprites.remove(firstGroundSprite);
             firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
-            groundSprite.shapeColor = color(79, 37, 14);
             groundSprites.add(firstGroundSprite);
         }
         
         if (random() > 0.95) {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
             obstacleSprites.add(obstacle);
+            obstacle.shapeColor = color(107, 102, 100);
         }
         
         var firstObstacle = obstacleSprites[0];
