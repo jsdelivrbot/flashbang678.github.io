@@ -17,9 +17,11 @@ var playerImage;
 var obstacleSprites;
 
 var gemSprites;
+var gemImage;
 
 function preload(){
 playerImage=loadImage("./spaceship.png")
+Image=loadImage("./Gem.png")
 }
 
 
