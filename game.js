@@ -91,9 +91,8 @@ function draw() {
             removeSprite(firstObstacle);
         }
         var firstGem = gemSprites[0];
-            gemSprites.addImage =
-        if (obstacleSprites.length > 0 && firstObstacle.position.x <= camera.position.x - (width/2 + firstObstacle.width/2)) {
-            removeSprite(firstObstacle);
+        if (Gem.length > 0 && firstO.position.x <= camera.position.x - (width/2 + firstGem.width/2)) {
+            removeSprite(firstgem);
         }
         
         obstacleSprites.overlap(player, endGame);
