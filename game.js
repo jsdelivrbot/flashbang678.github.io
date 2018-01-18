@@ -65,13 +65,7 @@ function draw() {
             player.position.y = (height-50) - (player.height/2);
         }
         
-var firstGroundSprite = groundSprites[0];
-        if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)) {
-            groundSprites.remove(firstGroundSprite);
-            firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
-            groundSprites.add(firstGroundSprite);
-        }
-        
+
         if (random() > 0.95) {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
             obstacleSprites.add(obstacle);
