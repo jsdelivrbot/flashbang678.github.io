@@ -34,7 +34,6 @@ function setup() {
     
     numGroundSprites = width/GROUND_SPRITE_WIDTH+1;
     for (var n = 0; n < numGroundSprites; n++) {
-        groundSprite.shapeColor = color(0,0,0);
         var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
                 groundSprite.shapeColor = color(79, 75, 74);
                 groundSprites.add(groundSprite);
