@@ -40,13 +40,9 @@ function setup() {
         var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
                 groundSprite.shapeColor = color(79, 75, 74);
                 groundSprites.add(groundSprite);
+
     }
 
-    for (var n = 0; n < numGroundSprites; n++) {
-        var groundSprite = createSprite(n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
-        groundSprites.add(groundSprite);
-    }
-    
     player = createSprite(100, height -75, 50, 50);
     
     obstacleSprites = new Group();
@@ -76,6 +72,7 @@ function draw() {
             obstacleSprites.add(obstacle);
             obstacle.rotationSpeed = 3.5;
             obstacle.addImage(gemImage);
+            obstacle.scale=.25
         }
         
         if (random() > 0.95) {
