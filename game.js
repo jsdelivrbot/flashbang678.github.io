@@ -72,7 +72,7 @@ function draw() {
             obstacleSprites.add(obstacle);
             obstacle.rotationSpeed = 3.5;
             obstacle.addImage(gemImage);
-            obstacle.scale=.20;
+            obstacle.scale=.15;
         }
 
         if (random() > 0.95) {
