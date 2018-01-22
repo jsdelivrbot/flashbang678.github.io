@@ -22,7 +22,7 @@ var gemImage;
 
 function preload(){
 playerImage=loadImage("./spaceship.png")
-Image=loadImage("./Gem.png")
+gemImage=loadImage("./Gem.png")
 }
 
 
@@ -75,7 +75,7 @@ function draw() {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
             obstacleSprites.add(obstacle);
             obstacle.rotationSpeed = 3.5;
-            obstacle.addImage(Gem.png);
+            obstacle.addImage(gemImage);
         }
         
         if (random() > 0.95) {
