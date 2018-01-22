@@ -67,6 +67,13 @@ function draw() {
             player.position.y = (height-50) - (player.height/2);
         }
         
+        if (random() > 0.95) {
+            var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
+            obstacleSprites.add(obstacle);
+            obstacle.rotationSpeed = 3.5;
+            obstacle.addImage(gemImage);
+            obstacle.scale=.20;
+        }
 
         if (random() > 0.95) {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
@@ -74,12 +81,7 @@ function draw() {
             obstacle.shapeColor = (56, 6, 6)
         }
         
-        if (random() > 0.95) {
-            var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
-            obstacleSprites.add(obstacle);
-            obstacle.rotationSpeed = 3.5;
-            obstacle.addImage(gemImage);
-        }
+
 
         var firstObstacle = obstacleSprites[0];
             obstacleSprites.shapeColor = color(119, 113, 110);
