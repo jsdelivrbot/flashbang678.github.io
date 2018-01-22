@@ -65,8 +65,6 @@ function draw() {
         if (groundSprites.overlap(player)) {
             player.velocity.y = 0;
             player.position.y = (height-50) - (player.height/2);
-                        obstacle.rotationSpeed = 3.5;
-            obstacle.addImage(asteroidImage);
         }
         
 
@@ -81,7 +79,8 @@ function draw() {
         if (random() > 0.95) {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
             obstacleSprites.add(obstacle);
-            obstacle.shapeColor = color(143, 144, 145);
+            obstacle.rotationSpeed = 3.5;
+            obstacle.addImage(asteroidImage);
         }
 
         var firstObstacle = obstacleSprites[0];
