@@ -23,6 +23,7 @@ var gemImage;
 function preload(){
 playerImage=loadImage("./spaceship.png")
 gemImage=loadImage("./Gem.png")
+asteroidImage=loadImage("./asteroidsprite.png")
 }
 
 
@@ -64,6 +65,8 @@ function draw() {
         if (groundSprites.overlap(player)) {
             player.velocity.y = 0;
             player.position.y = (height-50) - (player.height/2);
+                        obstacle.rotationSpeed = 3.5;
+            obstacle.addImage(asteroidImage);
         }
         
 
@@ -72,13 +75,13 @@ function draw() {
             obstacleSprites.add(obstacle);
             obstacle.rotationSpeed = 3.5;
             obstacle.addImage(gemImage);
-            obstacle.scale=.25
+            obstacle.scale=.20
         }
         
         if (random() > 0.95) {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
             obstacleSprites.add(obstacle);
-            obstacle.shapeColor = color(36, 37, 38);
+            obstacle.shapeColor = color(143, 144, 145);
         }
 
         var firstObstacle = obstacleSprites[0];
