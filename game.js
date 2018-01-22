@@ -5,6 +5,7 @@ var GRAVITY = 0.3;
 var JUMP = -7;
 var DIVE = 7;
 var BOOST = 10;
+var MODFIER
 
 var groundSprites;
 var GROUND_SPRITE_WIDTH = 50;
@@ -79,7 +80,7 @@ function draw() {
         if (random() > 0.95) {
             var obstacle = createSprite(camera.position.x + width, random(0, (height-50)-15), 30, 30);
             obstacleSprites.add(obstacle);
-            obstacle.shapeColor = color(107, 102, 100);
+            obstacle.shapeColor = color(36, 37, 38);
         }
 
         var firstObstacle = obstacleSprites[0];
@@ -88,7 +89,6 @@ function draw() {
             removeSprite(firstObstacle);
         }  
         obstacleSprites.overlap(player, endGame);
-        gemSprites.overlap(player, score +10);
 
         if (keyDown(UP_ARROW)) {
             player.velocity.y = JUMP;
